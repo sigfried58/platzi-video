@@ -6,6 +6,7 @@ const app = document.getElementById('app');
 
 render(
   <Media
+    type="video"
     title="¿Qué es responsive Design?"
     author="LeonidasEsteban"
     image="./images/covers/responsive.jpg"
