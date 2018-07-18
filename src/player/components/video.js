@@ -9,19 +9,17 @@ class Video extends Component {
       this.video.pause();
     }
   }
-
   componentWillReceiveProps(nextProps) {
     if (nextProps.pause !== this.props.pause) {
       this.togglePlay();
     }
   }
-
   setRef = element => {
     this.video = element;
   };
-
   render() {
-    const { handleLoadedMetadata } = this.props;
+    const { handleLoadedMetadata, handleTimeUpdate } = this.props;
+
     return (
       <div className="Video">
         <video
@@ -29,6 +27,7 @@ class Video extends Component {
           src={this.props.src}
           ref={this.setRef}
           onLoadedMetadata={handleLoadedMetadata}
+          onTimeUpdate={handleTimeUpdate}
         />
       </div>
     );
