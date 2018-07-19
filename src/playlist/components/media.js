@@ -6,15 +6,31 @@ class Media extends PureComponent {
   state = {
     author: 'Leonidas Esteban'
   };
-
-  // handleClick = event => {
-  //   this.setState({
-  //     author: 'Ricardo Celis'
-  //   });
-  // };
+  // constructor(props) {
+  //   super(props)
+  //   this.state = {
+  //     author: props.author
+  //   }
+  // //   this.handleClick = this.handleClick.bind(this);
+  // }
+  handleClick = event => {
+    // console.log(this.props.image)
+    // this.setState({
+    //   author: 'Ricardo Celis',
+    // })
+    this.props.openModal(this.props);
+  };
   render() {
+    const styles = {
+      container: {
+        color: '#44546b',
+        cursor: 'pointer',
+        width: 260,
+        border: '1px solid red'
+      }
+    };
     return (
-      <div className="Media" onClick={this.props.handleClick}>
+      <div className="Media" onClick={this.handleClick}>
         <div className="Media-cover">
           <img
             src={this.props.cover}

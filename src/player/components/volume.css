@@ -23,10 +23,11 @@
 }
 .Volume input {
   cursor: grab;
-  background: blue;
-  border: 1px solid blue;
+  background: transparent;
+  border: 1px solid transparent;
 }
 
 .Volume:hover .Volume-range {
   display: flex;
+  align-items: center;
 }

@@ -4,7 +4,7 @@ import './volume.css';
 
 function Volume(props) {
   return (
-    <button className="Volume">
+    <div className="Volume">
       <VolumenIcon color="white" size={25} />
       <div className="Volume-range">
         <input
@@ -15,7 +15,7 @@ function Volume(props) {
           onChange={props.handleVolumeChange}
         />
       </div>
-    </button>
+    </div>
   );
 }
 
